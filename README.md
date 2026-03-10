@@ -18,17 +18,28 @@ http://localhost:8086/swagger-ui.html   (notification-service)
 ## Project Structure
 
 
-uber-microservices/
-├── common-dto/          # Shared enums, DTOs, Kafka events
-├── eureka-server/       # Service discovery
-├── api-gateway/         # JWT validation + request routing
-├── auth-service/        # Registration, login, JWT tokens
-├── user-service/        # Passenger profiles, favorite routes
-├── driver-service/      # Driver management, location, matching
-├── ride-service/        # Ride lifecycle, pricing, reviews, reports
-├── payment-service/     # Payment processing (multi-strategy)
-├── notification-service/# Multi-channel notifications (MongoDB)
+uber-microservices
+
+├── common-dto          # Shared enums, DTOs, Kafka events
+
+├── eureka-server        # Service discovery
+
+├── api-gateway          # JWT validation + request routing
+
+├── auth-service         # Registration, login, JWT tokens
+
+├── user-service         # Passenger profiles, favorite routes
+
+├── driver-service       # Driver management, location, matching
+
+├── ride-service         # Ride lifecycle, pricing, reviews, reports
+
+├── payment-service      # Payment processing (multi-strategy)
+
+├── notification-service # Multi-channel notifications (MongoDB)
+
 ├── docker-compose.yml   # Infrastructure (Kafka, PG, Mongo, Redis)
+
 └── init-databases.sql   # PostgreSQL database initialization
 
 
@@ -45,15 +56,21 @@ cd eureka-server && mvn spring-boot:run
 cd api-gateway && mvn spring-boot:run
 
 # Terminal 3-8: Business Services (any order after Eureka is up)
+
 cd auth-service && mvn spring-boot:run
+
 cd user-service && mvn spring-boot:run
+
 cd driver-service && mvn spring-boot:run
+
 cd ride-service && mvn spring-boot:run
+
 cd payment-service && mvn spring-boot:run
+
 cd notification-service && mvn spring-boot:run
 
 
-### Get Ride Estimate (No Auth Required)
+### Get Ride Estimate (WithOut logging)
 "http://localhost:8080/api/rides/estimate?depLat=12.97&depLng=77.59&destLat=12.93&destLng=77.62&type=STANDARD"
 
 
