@@ -8,10 +8,15 @@ docker-compose up -d --build
 
 
 http://localhost:8081/swagger-ui.html   (auth-service)
+
 http://localhost:8082/swagger-ui.html   (user-service)
+
 http://localhost:8083/swagger-ui.html   (driver-service)
+
 http://localhost:8084/swagger-ui.html   (ride-service)
+
 http://localhost:8085/swagger-ui.html   (payment-service)
+
 http://localhost:8086/swagger-ui.html   (notification-service)
 
 
