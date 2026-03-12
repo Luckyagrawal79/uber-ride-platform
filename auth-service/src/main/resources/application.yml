@@ -20,6 +20,6 @@ eureka:
       defaultZone: http://localhost:8761/eureka/
 app:
   jwt:
-    secret: ${JWT_SECRET:Secret_key}
+    secret: ${JWT_SECRET:Secret_keyhinihuoi7tvihulkjklbih9gh8gfd5rgbvjbj}
     access-expiration-ms: 86400000
     refresh-expiration-ms: 604800000

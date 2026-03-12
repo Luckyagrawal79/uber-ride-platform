@@ -65,4 +65,4 @@ eureka:
 
 app:
   jwt:
-    secret: ${JWT_SECRET:Secret_key}
+    secret: ${JWT_SECRET:Secret_keyhinihuoi7tvihulkjklbih9gh8gfd5rgbvjbj}
